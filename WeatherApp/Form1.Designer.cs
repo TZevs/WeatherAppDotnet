@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            localTBox = new TextBox();
             searchBtn = new Button();
+            localTBox = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,8 +42,18 @@
             panel1.Controls.Add(localTBox);
             panel1.Location = new Point(-1, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(801, 74);
+            panel1.Size = new Size(625, 74);
             panel1.TabIndex = 0;
+            // 
+            // searchBtn
+            // 
+            searchBtn.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            searchBtn.Location = new Point(436, 21);
+            searchBtn.Name = "searchBtn";
+            searchBtn.Size = new Size(171, 32);
+            searchBtn.TabIndex = 1;
+            searchBtn.Text = "Search";
+            searchBtn.UseVisualStyleBackColor = true;
             // 
             // localTBox
             // 
@@ -55,16 +65,6 @@
             localTBox.PlaceholderText = "Location";
             localTBox.Size = new Size(374, 32);
             localTBox.TabIndex = 1;
-            // 
-            // searchBtn
-            // 
-            searchBtn.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchBtn.Location = new Point(436, 21);
-            searchBtn.Name = "searchBtn";
-            searchBtn.Size = new Size(171, 32);
-            searchBtn.TabIndex = 1;
-            searchBtn.Text = "Search";
-            searchBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
