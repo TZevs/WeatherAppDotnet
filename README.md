@@ -1,1 +1,1 @@
-# WeatherAppDotnet
+# Weather App - C# Windows Forms
