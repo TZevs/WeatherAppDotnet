@@ -31,6 +31,9 @@
             panel1 = new Panel();
             searchBtn = new Button();
             localTBox = new TextBox();
+            label1 = new Label();
+            lblLocation = new Label();
+            lblTemp = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,6 +57,7 @@
             searchBtn.TabIndex = 1;
             searchBtn.Text = "Search";
             searchBtn.UseVisualStyleBackColor = true;
+            searchBtn.Click += searchBtn_Click;
             // 
             // localTBox
             // 
@@ -62,9 +66,39 @@
             localTBox.ForeColor = Color.LightGray;
             localTBox.Location = new Point(20, 21);
             localTBox.Name = "localTBox";
-            localTBox.PlaceholderText = "Location";
+            localTBox.PlaceholderText = "Search Location";
             localTBox.Size = new Size(374, 32);
             localTBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(144, 207);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 1;
+            // 
+            // lblLocation
+            // 
+            lblLocation.AutoSize = true;
+            lblLocation.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLocation.ForeColor = Color.White;
+            lblLocation.Location = new Point(19, 88);
+            lblLocation.Name = "lblLocation";
+            lblLocation.Size = new Size(81, 37);
+            lblLocation.TabIndex = 2;
+            lblLocation.Text = "City:";
+            // 
+            // lblTemp
+            // 
+            lblTemp.AutoSize = true;
+            lblTemp.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTemp.ForeColor = Color.White;
+            lblTemp.Location = new Point(19, 165);
+            lblTemp.Name = "lblTemp";
+            lblTemp.Size = new Size(105, 37);
+            lblTemp.TabIndex = 3;
+            lblTemp.Text = "Temp:";
             // 
             // Form1
             // 
@@ -72,6 +106,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(60, 60, 70);
             ClientSize = new Size(623, 450);
+            Controls.Add(lblTemp);
+            Controls.Add(lblLocation);
+            Controls.Add(label1);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
@@ -86,5 +123,8 @@
         private Panel panel1;
         private TextBox localTBox;
         private Button searchBtn;
+        private Label label1;
+        private Label lblLocation;
+        private Label lblTemp;
     }
 }
