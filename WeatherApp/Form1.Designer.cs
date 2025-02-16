@@ -32,9 +32,10 @@
             searchBtn = new Button();
             localTBox = new TextBox();
             label1 = new Label();
-            lblLocation = new Label();
             lblTemp = new Label();
+            pbIcon = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbIcon).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -62,12 +63,12 @@
             // localTBox
             // 
             localTBox.BackColor = Color.FromArgb(45, 45, 55);
-            localTBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            localTBox.ForeColor = Color.LightGray;
+            localTBox.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            localTBox.ForeColor = Color.White;
             localTBox.Location = new Point(20, 21);
             localTBox.Name = "localTBox";
             localTBox.PlaceholderText = "Search Location";
-            localTBox.Size = new Size(374, 32);
+            localTBox.Size = new Size(374, 36);
             localTBox.TabIndex = 1;
             // 
             // label1
@@ -78,27 +79,28 @@
             label1.Size = new Size(0, 20);
             label1.TabIndex = 1;
             // 
-            // lblLocation
-            // 
-            lblLocation.AutoSize = true;
-            lblLocation.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLocation.ForeColor = Color.White;
-            lblLocation.Location = new Point(19, 88);
-            lblLocation.Name = "lblLocation";
-            lblLocation.Size = new Size(81, 37);
-            lblLocation.TabIndex = 2;
-            lblLocation.Text = "City:";
-            // 
             // lblTemp
             // 
             lblTemp.AutoSize = true;
-            lblTemp.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTemp.Font = new Font("Century Gothic", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTemp.ForeColor = Color.White;
-            lblTemp.Location = new Point(19, 165);
+            lblTemp.Location = new Point(319, 93);
             lblTemp.Name = "lblTemp";
-            lblTemp.Size = new Size(105, 37);
+            lblTemp.Size = new Size(74, 93);
             lblTemp.TabIndex = 3;
-            lblTemp.Text = "Temp:";
+            lblTemp.Text = "T";
+            lblTemp.TextAlign = ContentAlignment.MiddleCenter;
+            lblTemp.Visible = false;
+            // 
+            // pbIcon
+            // 
+            pbIcon.Location = new Point(178, 113);
+            pbIcon.Name = "pbIcon";
+            pbIcon.Size = new Size(125, 62);
+            pbIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            pbIcon.TabIndex = 5;
+            pbIcon.TabStop = false;
+            pbIcon.Visible = false;
             // 
             // Form1
             // 
@@ -106,14 +108,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(60, 60, 70);
             ClientSize = new Size(623, 450);
+            Controls.Add(pbIcon);
             Controls.Add(lblTemp);
-            Controls.Add(lblLocation);
             Controls.Add(label1);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -124,7 +127,7 @@
         private TextBox localTBox;
         private Button searchBtn;
         private Label label1;
-        private Label lblLocation;
         private Label lblTemp;
+        private PictureBox pbIcon;
     }
 }
